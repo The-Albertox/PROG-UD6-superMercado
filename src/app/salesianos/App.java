@@ -3,6 +3,7 @@ package app.salesianos;
 import java.util.Scanner;
 
 import app.salesianos.cajero.Cashier;
+import app.salesianos.cliente.Client;
 import app.salesianos.utiles.Menu;
 
 public class App {
@@ -28,10 +29,27 @@ public class App {
                     }
 
                     break;
+                case "2":
+                    if (!openCashier) {
+                        System.out.println("la cja esta cerrada");
+                    } else {
+                        Client newClient = getRandomNames();
+                        System.out.println("se ha añiadido el cliente la cola");
+                        System.out.println(newClient);
+                    }
+                    break;
+
+                    case "3":
+                    
+                    break;
 
                 default:
                     break;
             }
         }
+        
+    }
+    private static Client getRandomNames(){
+        return null;
     }
 }
