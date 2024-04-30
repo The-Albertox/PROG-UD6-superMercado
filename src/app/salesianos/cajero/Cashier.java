@@ -2,6 +2,7 @@ package app.salesianos.cajero;
 
 import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 import app.salesianos.cliente.Client;
 
@@ -15,7 +16,6 @@ public class Cashier {
     public Cashier(String name, Queue<Client> customQueue, int cashierNumber, int clientNumber,
             List<String> customersList) {
         this.name = name;
-        this.customersQueue = customersQueue;
         this.cashierNumber = cashierNumber;
         this.clientNumber = clientNumber;
         this.customersList = customersList;
@@ -49,5 +49,19 @@ public class Cashier {
     public void emptyQueue() {
         customersQueue.clear();
         System.out.println("la fila de " + name + "ha sido vaciada");
+    }
+
+    @Override
+    public String toString() {
+        Stack<String> stack = new Stack<>();
+        stack.push("================================");
+        stack.push("*Clientes en la fila:");
+        for (String client : this.customersList) {
+            stack.push(client);
+        }
+        stack.push("* Total de clientes:" + this.clientNumber);
+        stack.push("* Numero de caja:" + this.cashierNumber + ":");
+        stack.push("cajero");
+        return toString();
     }
 }
