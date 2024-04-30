@@ -56,14 +56,21 @@ public class App {
                         }
                     }
                 case "5":
+                    if (openCashier) {
+                        openCashier = false;
+                        System.out.println("la caja ha sido cerrada. ");
+                    } else {
+                        System.out.println("la caja ya estaba cerrada.");
+                    }
 
+                    exist = true;
                     break;
-
                 default:
+                    System.out.println("opcion invalida");
                     break;
             }
         }
-
+        KEYBOARD.close();
     }
 
     private static Client getRandomNames() {
