@@ -10,7 +10,7 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        
+        boolean openCashier = false;
         boolean exist = false;
         String option = KEYBOARD.next();
 
@@ -18,7 +18,20 @@ public class App {
         Menu menu = new Menu();
         while (exist) {
             option = menu.requestMenuOption();
+            switch (option) {
+                case "1":
+                    if (openCashier) {
+                        System.out.println("la caja ya estaba abierta");
+                    } else {
+                        openCashier = true;
+                        System.out.println("la cja a sido abierta");
+                    }
 
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }
