@@ -40,8 +40,13 @@ public class App {
                     break;
 
                     case "3":
-                    
+                    if (Cashier.customersQueue.isEmpty()){
+                        System.out.println("no hya clientes pendientes de ser atendidos");
+                    } else {
+                       cashier.attendClient();
+                    }
                     break;
+                 
 
                 default:
                     break;
