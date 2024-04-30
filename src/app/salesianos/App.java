@@ -39,22 +39,34 @@ public class App {
                     }
                     break;
 
-                    case "3":
-                    if (Cashier.customersQueue.isEmpty()){
+                case "3":
+                    if (Cashier.customersQueue.isEmpty()) {
                         System.out.println("no hya clientes pendientes de ser atendidos");
                     } else {
-                       cashier.attendClient();
+                        cashier.attendClient();
                     }
                     break;
-                 
+                case "4":
+                    System.out.println("Clientes pendientes en la cola de " + cashier.getName() + " :");
+                    if (Cashier.customersQueue.isEmpty()) {
+                        System.out.println("no hay clientes pendientes");
+                    } else {
+                        for (Client client : Cashier.customersQueue) {
+                            System.out.println(client);
+                        }
+                    }
+                case "5":
+
+                    break;
 
                 default:
                     break;
             }
         }
-        
+
     }
-    private static Client getRandomNames(){
+
+    private static Client getRandomNames() {
         return null;
     }
 }
