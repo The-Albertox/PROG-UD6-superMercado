@@ -33,4 +33,15 @@ public class Client {
         System.out.println("La cesta de " + name + "ha sido vaciada");
     }
 
+    @Override
+    public String toString() {
+        Stack<String> pile = new Stack<>();
+        pile.push("===================================\n");
+        pile.push("la lista de artucloa de la cesta : \n");
+        for (String product : shoppingBag) {
+            pile.push(product + "\n");
+        }
+        pile.push("*Nombre:" + this.name + "\n");
+        return toString();
+    }
 }
