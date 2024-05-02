@@ -3,13 +3,16 @@ package app.salesianos.cliente;
 import java.util.Stack;
 
 import app.salesianos.utiles.RandomNames;
+import app.salesianos.utiles.RandomProducts;
 
 public class Client {
     private String name;
+    private String products;
     private Stack<String> shoppingBag;
 
     public Client() {
         this.name = RandomNames.getRandomNames();
+        this.products = RandomProducts.getRandomProdutcs();
         this.shoppingBag = new Stack<>();
     }
 
@@ -17,8 +20,8 @@ public class Client {
         return name;
     }
 
-    public void addProduct(String product) {
-        shoppingBag.push(product);
+    public void addProduct() {
+        shoppingBag.push(products);
     }
 
     public void showShoppingBag() {
@@ -42,6 +45,7 @@ public class Client {
             pile.push(product + "\n");
         }
         pile.push("*Nombre:" + this.name + "\n");
-        return toString();
+        pile.push("*articulos:" + this.products + "\n");
+        return pile.toString();
     }
 }
