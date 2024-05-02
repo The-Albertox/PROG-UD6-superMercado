@@ -1,10 +1,12 @@
 package app.salesianos.cajero;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
 import app.salesianos.cliente.Client;
+import app.salesianos.utiles.RandomNames;
 
 public class Cashier {
     private String name;
@@ -15,7 +17,8 @@ public class Cashier {
 
     public Cashier(String name, Queue<Client> customQueue, int cashierNumber, int clientNumber,
             List<String> customersList) {
-        this.name = name;
+        this.name = RandomNames.getRandomNames();
+        this.customersQueue = new LinkedList<>();
         this.cashierNumber = cashierNumber;
         this.clientNumber = clientNumber;
         this.customersList = customersList;
@@ -26,14 +29,14 @@ public class Cashier {
     }
 
     public void addClient(Client client) {
-        customersQueue.offer(client);
-        System.out.println(client.getName() + "ha entrado a fila para ser atendido por " + name + ".");
+        customersQueue.add(client);
+        System.out.println(client.getName() + " ha entrado a fila para ser atendido por " + name + ".");
     }
 
     public void attendClient() {
         if (!customersQueue.isEmpty()) {
             Client client = customersQueue.poll();
-            System.out.println(name + "ha atendido a" + client.getName() + ".");
+            System.out.println(name + " ha atendido a " + client.getName() + ".");
         } else {
             System.out.println("no hay clientes en la fila de" + name + ".");
         }
@@ -48,7 +51,7 @@ public class Cashier {
 
     public void emptyQueue() {
         customersQueue.clear();
-        System.out.println("la fila de " + name + "ha sido vaciada");
+        System.out.println("la fila de " + name + " ha sido vaciada");
     }
 
     @Override
