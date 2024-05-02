@@ -6,7 +6,7 @@ import java.util.Scanner;
 import app.salesianos.cajero.Cashier;
 import app.salesianos.cliente.Client;
 import app.salesianos.utiles.Menu;
-import app.salesianos.utiles.RandomNames;
+
 
 public class App {
     static final Scanner KEYBOARD = new Scanner(System.in);
