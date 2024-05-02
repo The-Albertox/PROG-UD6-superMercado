@@ -3,9 +3,9 @@ package app.salesianos;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import app.salesianos.cajero.Cashier;
-import app.salesianos.cliente.Client;
-import app.salesianos.utiles.Menu;
+import app.salesianos.cashier.Cashier;
+import app.salesianos.client.Client;
+import app.salesianos.resource.Menu;
 
 
 public class App {

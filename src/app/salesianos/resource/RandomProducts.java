@@ -1,4 +1,4 @@
-package app.salesianos.utiles;
+package app.salesianos.resource;
 
 import java.util.Random;
 

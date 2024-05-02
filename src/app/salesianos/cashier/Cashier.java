@@ -1,12 +1,12 @@
-package app.salesianos.cajero;
+package app.salesianos.cashier;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
-import app.salesianos.cliente.Client;
-import app.salesianos.utiles.RandomNames;
+import app.salesianos.client.Client;
+import app.salesianos.resource.RandomNames;
 
 public class Cashier {
     private String name;
