@@ -1,9 +1,9 @@
-package app.salesianos.cliente;
+package app.salesianos.client;
 
 import java.util.Stack;
 
-import app.salesianos.utiles.RandomNames;
-import app.salesianos.utiles.RandomProducts;
+import app.salesianos.resource.RandomNames;
+import app.salesianos.resource.RandomProducts;
 
 public class Client {
     private String name;

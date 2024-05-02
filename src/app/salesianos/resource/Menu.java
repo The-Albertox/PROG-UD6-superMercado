@@ -1,4 +1,4 @@
-package app.salesianos.utiles;
+package app.salesianos.resource;
 
 public class Menu {
     public String getMenu() {
